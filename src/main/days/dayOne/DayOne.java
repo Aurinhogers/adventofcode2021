@@ -2,7 +2,6 @@ package main.days.dayOne;
 
 import main.common.FileReader;
 
-import java.util.Collections;
 import java.util.List;
 
 public class DayOne {
@@ -15,11 +14,10 @@ public class DayOne {
         }
 
         public static int getAmountofincreases(List<Integer>list){
-            int increase = 0, decrease = 0;
+            int increase = 0;
 
             for( int i= 0; i< list.size()-1 ; i++){     
-                if(list.get(i) > list.get(i+1)) {decrease++;}
-                else increase++;
+                if(list.get(i) < list.get(i+1)) {increase++;}
             }
             return increase;
         }
